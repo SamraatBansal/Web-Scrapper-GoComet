@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+html {
+	scroll-behavior: smooth;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+
+body {
+	min-height: 100vh;
+	width: 100%;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box; /* Opera/IE 8+ */
+    font-family: "EB Garamond";
+}
+
+h1{
+    font-size: 3rem;
+}
+
+p, li, ul{
+    line-height: 150%;
+    font-size: 1.25rem;
+}
+.content-container{
+    max-width: 800px;
+    margin: auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.sub-container{
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.sub-container p {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.sub-left{
+    width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+    .sub-left{
+        width: 60%;
+    }
+}
