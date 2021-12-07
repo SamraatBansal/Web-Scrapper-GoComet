@@ -10,21 +10,25 @@
 
 <body>
 
-    <div class="container content-container">
-        <!-- <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+    <aside>
+        <%=time%>
 
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
+    
             <div class="sub-container">
                 <div class="sub-left">
                     <p>By Samraat Bansal</p>
                 </div>
-
+    
                 <div class="sub-right">
                     <p>December 05, 2021</p>
                     <p>10 min read</p>
                 </div>
             </div>
-
-            <img src="https://picsum.photos/seed/picsum/800/500" class="img-fluid mb-5" alt="Responsive image"> -->
+    
+            <!-- <img src="https://picsum.photos/seed/picsum/800/500" class="img-fluid mb-5" alt="Responsive image"> -->
+    </aside>
+    <div class="container content-container">
             
             <%- contentHTML %>
         </div>        
@@ -33,3 +37,13 @@
 
 </html>
 
+<script>
+    $(' .content-container>div>div').empty();
+    document.querySelectorAll('img').forEach((i)=>{
+        if(i.src){
+
+            i.src = i.src.replace("https://miro.medium.com/max/60", "https://miro.medium.com/max/1000")
+        }
+        console.log(i.src)
+    })
+</script>

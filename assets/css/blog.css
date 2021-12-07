@@ -12,12 +12,17 @@ html {
 
 
 body {
+    display: flex;
+    align-items: center;
 	min-height: 100vh;
 	width: 100%;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box; /* Firefox, other Gecko */
 	box-sizing: border-box; /* Opera/IE 8+ */
     font-family: "EB Garamond";
+}
+aside{
+    max-width: 20%;
 }
 
 h1{
@@ -29,8 +34,9 @@ p, li, ul{
     font-size: 1.25rem;
 }
 .content-container{
-    max-width: 800px;
-    margin: auto;
+    top: 0;
+    max-width: 50%;
+    /* margin: auto; */
     padding-top: 5rem;
     padding-bottom: 5rem;
 }

@@ -10,11 +10,14 @@
             <p class="content-para">These resources are a good place to start learning about Blockchain, Cryptocurrency and various concepts related to them.</p>
 
             <div class="search-container">
-                <form id="search-form" class="search-box" action="/search/tag" method="post">
-                    <input id="searchBox" type="text" name="searchTag" class="form-control"placeholder="Search for Tags here...">
-                    <button class="search-btn" type="submit"> Search Tag
-                    </button>
-                </form>
+                <!-- <form id="search-form" class="search-box" action="/search/tag" method="get"> -->
+                    <div  id="search-form" class="search-box">
+
+                        <input id="searchBox" type="text" name="searchTag" class="form-control"placeholder="Search for Tags here..." required>
+                        <button id="search-button" class="search-btn"> Search Tag
+                        </button>
+                    </div>
+                <!-- </form> -->
 
                 <!-- <div class="filters">
                     <i class="fas fa-filter"></i>
@@ -26,13 +29,20 @@
     <div id="card-list" class="card-group card-grid">
         
       </div>
-      <form id="next-blogs"  action="" method="post">
+      <div id="next-blogs" class="next-blog">
          <input id="searchTag" type="hidden" name="searchTag"> 
-         <input id="filter" type="hidden" name="filter"> 
          <input id="next" type="hidden" name="next"> 
-         <button class="search-btn" type="submit"> Crawl Next Blogs
+         <button id="next-blogs-button"class="search-btn"> Crawl Next Blogs
         </button>
-      </form>
+    </div>
+      <!-- <button id="next-blogs" class="search-btn">Crawl Next Blogs</button> -->
+      <div id="not-found" class="not-found">
+        <div class="not-container">
+            <img src="images/sad_search.png">
+            <p>Oops! No results found. <br> Try searching for these tags instead.</p>    
+        </div>
+        <div class="suggested-tag-div" style="display: flex-row;"></div>
+    </div>
       <!-- <a id="#next-blogs" href=""><button>Crawl Next Blogs</button></a> -->
 </div>
 
