@@ -148,6 +148,9 @@
     max-width: 30%;
     margin: 1%;
 }
+.card{
+    margin: 30px;
+}
 #not-found{
     display: none;
     margin-top: -8%;
@@ -162,7 +165,10 @@
     align-items: center;
     text-align: center;
 }
-
+.search-tag-div{
+    display: none;
+    margin-left: 15%;
+}
 
 .not-container img {
     width: 8rem;

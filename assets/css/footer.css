@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+footer {
+    position: fixed  ;
+    /* top: 100%; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+ }
+
+.disclaimer-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+  background-color: black;
+  height: 150px;
+  width: 100%;
+  color: white; }
+
+.acknowledgement-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #1B1F23;
+  height: 100px;
+  width: 100%;
+  color: white;
+  font-weight: 400;
+  font-family: "open sans", sans-serif;
+  font-size: 1.2rem; }
+  .acknowledgement-div span {
+    margin: 0px 10px; }

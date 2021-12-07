@@ -12,8 +12,9 @@ html {
 
 
 body {
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center;
+    justify-content: center; */
 	min-height: 100vh;
 	width: 100%;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -21,8 +22,14 @@ body {
 	box-sizing: border-box; /* Opera/IE 8+ */
     font-family: "EB Garamond";
 }
-aside{
+.aside-div{
+    position: absolute;
+    top: 20%;
+    right: 8%;
     max-width: 20%;
+    float: right;
+    /* display: inline-block; */
+    vertical-align: top;
 }
 
 h1{
@@ -34,13 +41,17 @@ p, li, ul{
     font-size: 1.25rem;
 }
 .content-container{
-    top: 0;
-    max-width: 50%;
+    /* display: inline-block; */
+    vertical-align: top;
+    left: 30%;
+    max-width: 35%;
     /* margin: auto; */
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
-
+.content-container img{
+    width: 100%;
+}
 .sub-container{
     margin: 2rem 0;
     display: flex;
@@ -58,6 +69,28 @@ p, li, ul{
 .sub-left{
     width: 70%;
 }
+.empty-list p
+{
+	position: relative;
+	color: lightgrey;
+	text-align: center;
+	font-size: 3.5rem;
+	font-weight: 500;
+	font-family: sans-serif; 
+	margin-top: 20px;
+}
+.widget {
+    border-top: 4px solid black;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.widget .widget-title {
+    letter-spacing: 0.05rem;
+    font-size: 1.1rem;
+    word-spacing: 0.1rem;
+}
+
 
 @media screen and (max-width: 768px) {
     .sub-left{

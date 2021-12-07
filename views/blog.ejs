@@ -9,41 +9,63 @@
     <link rel="stylesheet" type="text/css" href="/css/blog.css">
 
 <body>
-
-    <aside>
-        <%=time%>
-
-        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
-    
-            <div class="sub-container">
-                <div class="sub-left">
-                    <p>By Samraat Bansal</p>
-                </div>
-    
-                <div class="sub-right">
-                    <p>December 05, 2021</p>
-                    <p>10 min read</p>
-                </div>
-            </div>
-    
-            <!-- <img src="https://picsum.photos/seed/picsum/800/500" class="img-fluid mb-5" alt="Responsive image"> -->
-    </aside>
+<aside>
+    <a href="/">
+        <h4 id="widget-title">Home</h4></a>
+</aside>
     <div class="container content-container">
             
             <%- contentHTML %>
-        </div>        
+            
+        </div>    
+        
+        <aside class="aside-div">
+            <div class="empty-list widget" style="display: block;">    
+                <h4 id="widget-title">Responses</h4>
+                <%if(comments.length==0){%>
+                <p>
+                  No Responses Logged 😓
+                </p>
+                <%}%>
+            </div>
+            <%for(let comment of comments){%>
+            <div class="d-flex flex-row mt-4"> <img src="https://miro.medium.com/fit/c/40/40/<%=comment.creatorImage%>" width="40" height="40">
+                <div class="ml-2 w-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-row align-items-center"> <span class="font-weight-bold name"><%=comment.creatorName%></span> <span class="dots"></span>  
+                        </div> 
+                    </div>
+                    <p class="user-comment-text text-justify" style="margin-top: 5%;"><%=comment.temp%></p>
+                </div>
+            </div>
+            <%}%>
+        </aside>
 
 </body>
 
 </html>
 
 <script>
+    let author =`<div class="sub-container">
+                <div class="sub-left">
+                    <p>By <%=blogDetails.creator%></p>
+                    <p>Crawled in <%=time%> seconds</p>
+                    <a href="<%=blogDetails.url%>">View it on Medium.com</a>
+                </div>
+    
+                <div class="sub-right">
+                    <p>Published On: <%=blogDetails.date%></p>
+                    <p><%=blogDetails.readingTime%> min read</p>
+                </div>
+            </div>`
     $(' .content-container>div>div').empty();
+    $(' .content-container>div>div').append(author);
+    $(' .container').contents().filter(function(){ return this.nodeType != 1; }).remove();
     document.querySelectorAll('img').forEach((i)=>{
         if(i.src){
 
             i.src = i.src.replace("https://miro.medium.com/max/60", "https://miro.medium.com/max/1000")
         }
-        console.log(i.src)
+        // console.log(i.src)
     })
 </script>
